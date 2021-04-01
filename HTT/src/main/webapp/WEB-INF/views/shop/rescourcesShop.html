@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Bellroy</title>
+    <link href='/resources/shop/favicon.ico' rel='icon' type='image/x-icon'>
+    <!-- Bootstrap -->
+    <link href="/resources/shop/css/bootstrap.css" rel="stylesheet">
+    <link rel="/resources/shop/stylesheet" type="text/css" href="css/font-awesome.css">
+    <link href="/resources/shop/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/resources/shop/js/html5shiv.min.js"></script>
+    <script src="/resources/shop/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+</body>
+<div th:fragment="script">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/resources/shop/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed-->
+    <script src="/resources/shop/js/bootstrap.js"></script>
+
+    <script>
+        // ===== Scroll to Top ====
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 500) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(700);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(700);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 700);
+        });
+    </script>
+</div>
+</html>

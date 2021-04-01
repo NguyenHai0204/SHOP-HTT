@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shop/rescourcesShop :: head">
+</head>
+<body>
+<a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
+
+<!--Header-->
+<header th:replace="/shop/layout :: header"></header>
+<!--End Header-->
+
+<div id="contentWrapper">
+    <div id="contentWrapperWhite">
+
+        <!-- BreadCrubms Start -->
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="breadcrumb text-success no-background">
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Wallets</a></li>
+                    <li>Note Sleeve</li>
+                </ul>
+            </div>
+        </div>
+        <!-- BreadCrubms End -->
+
+
+        <form th:object="${customer}" method="post" enctype="multipart/form-data" th:action="@{/profile/edit}">
+
+            <input type="hidden" th:field="*{id}">
+            <div class="form-group">
+                <label for="imageMulti">Avatar:</label>
+                <img th:src="@{'/upload/'+${customer.image}}" style="width: 200px;">
+            </div>
+            <input type="file" class="form-control" id="imageMulti" th:field="*{imageMulti}">
+            <input type="hidden" th:field="*{image}">
+            <div class="form-group" hidden>
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" th:field="*{email}">
+            </div>
+            <div class="form-group" >
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" th:field="*{password}">
+            </div>
+            <div class="form-group">
+                <label for="configPassword">Config Password:</label>
+                <input type="password" class="form-control" id="configPassword"
+                       th:field="*{configPassword}">
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" th:field="*{fullName}">
+                <td th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">name Error</td>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Gender:</label>
+                <select class="form-control" id="sel1" th:field="*{gender}">
+                    <option th:value="Male" th:utext="Male"></option>
+                    <option th:value="Female" th:utext="Female"></option>
+                    <option th:value="Other" th:utext="Other"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone number:</label>
+                <input type="number" class="form-control" id="phoneNumber" th:field="*{phoneNumber}">
+                <td th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">name Error
+                </td>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" th:field="*{dateOfBirth}">
+                </td>
+            </div>
+            <div class="form-group" hidden>
+                <label for="sel1">Role: </label>
+                <select class="form-control" id="sel1" th:field="*{role.id}">
+                    <th:block th:each="role : ${roles}">
+                        <option th:value="${role.getId()}" th:utext="${role.getName()}"></option>
+                    </th:block>
+                </select>
+            </div>
+            <a th:href="@{/customer}">
+                <button type="button" class="btn btn-fill btn-primary">Cancel</button>
+            </a>
+            <button type="reset" class="btn btn-fill btn-primary">Reset</button>
+            <button type="submit" class="btn btn-fill btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<footer th:replace="/shop/layout :: footer"></footer>
+<div th:replace="shop/rescourcesShop :: script"></div>
+</body>

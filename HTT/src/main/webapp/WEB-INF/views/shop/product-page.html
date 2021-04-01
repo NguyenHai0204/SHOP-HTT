@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shop/rescourcesShop :: head">
+</head>
+<body>
+<a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
+<header th:replace="/shop/layout :: header"></header>
+<div id="contentWrapper" class="margin-bottom-20">
+    <div class="container">
+        <!-- BreadCrubms Start -->
+        <!-- BreadCrubms Start -->
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="breadcrumb text-success no-background">
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Wallets</a></li>
+                    <li>Note Sleeve</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <form th:object="${product}">
+            <div class="col-md-7">
+                <div class="tab-content">
+                    <!-- Slide 1 Pane Start -->
+                    <div id="home" class="tab-pane fade in active">
+                        <!-- Slide 1 Start -->
+                        <div class="">
+                            <!-- Slide 1st myCarousel start -->
+                            <div id="blueCarousel" class="carousel slide product-gallery margin-bottom-20" data-ride="carousel" data-interval="false">
+                                <!-- 1st Slides and Images Start -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="img-responsive" th:src="@{'/upload/'+${product.image}}">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Slide 1 End -->
+
+                    </div>
+                    <!-- Slide 1 Pane End -->
+
+
+                    <div id="menu1" class="tab-pane fade">
+                        <!-- Slide 1 Start -->
+                        <div class="">
+
+                            <!-- Slide 1st myCarousel start -->
+                            <div id="blackCarousel" class="carousel slide product-gallery margin-bottom-20" data-ride="carousel" data-interval="false">
+
+
+                                <!-- 1st Slides and Images Start -->
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/black/1.jpg">
+                                    </div>
+
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/black/2.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/black/3.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/black/4.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <video class="img-responsive" controls muted loop>
+                                            <source src="videos/note-sleeve.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+
+                                </div>
+                                <!-- 1st Slides and Images End -->
+
+                            </div>
+
+                            <!-- indicators - Slide 1st Carousel end start -->
+                            <ol class="carousel-indicators product-gallery-indicators">
+                                <li data-target="#blackCarousel" data-slide-to="0" class="active">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/black/1.jpg"/>
+
+                                </li>
+                                <li data-target="#blackCarousel" data-slide-to="1">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/black/2.jpg"/>
+                                </li>
+                                <li data-target="#blackCarousel" data-slide-to="2">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/black/3.jpg"/>
+                                </li>
+                                <li data-target="#blackCarousel" data-slide-to="3">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/black/4.jpg"/>
+                                </li>
+                                <li data-target="#blackCarousel" data-slide-to="4"  class="product-gallery-indicators-video">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/black/5.jpg"/>
+                                    <span class="glyphicon glyphicon-play"></span>
+                                </li>
+                            </ol>
+                            <!-- indicators - Slide 1st Carousel end end -->
+                        </div>
+                        <!-- Slide 1 End -->
+                    </div>
+
+                    <div id="menu2" class="tab-pane fade">
+                        <!-- Slide 1 Start -->
+                        <div class="">
+
+                            <!-- Slide 1st myCarousel start -->
+                            <div id="greenCarousel" class="carousel slide product-gallery margin-bottom-20" data-ride="carousel" data-interval="false">
+
+
+                                <!-- 1st Slides and Images Start -->
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/green/1.jpg">
+                                    </div>
+
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/green/2.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/green/3.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/green/4.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <video class="img-responsive" controls muted loop>
+                                            <source src="videos/note-sleeve.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+
+                                </div>
+                                <!-- 1st Slides and Images End -->
+
+                            </div>
+
+                            <!-- indicators - Slide 1st Carousel end start -->
+                            <ol class="carousel-indicators product-gallery-indicators">
+                                <li data-target="#greenCarousel" data-slide-to="0" class="active">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/green/1.jpg"/>
+
+                                </li>
+                                <li data-target="#greenCarousel" data-slide-to="1">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/green/2.jpg"/>
+                                </li>
+                                <li data-target="#greenCarousel" data-slide-to="2">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/green/3.jpg"/>
+                                </li>
+                                <li data-target="#greenCarousel" data-slide-to="3">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/green/4.jpg"/>
+                                </li>
+                                <li data-target="#greenCarousel" data-slide-to="4"  class="product-gallery-indicators-video">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/green/5.jpg"/>
+                                    <span class="glyphicon glyphicon-play"></span>
+                                </li>
+                            </ol>
+                            <!-- indicators - Slide 1st Carousel end end -->
+                        </div>
+                        <!-- Slide 1 End -->
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <!-- Slide 1 Start -->
+                        <div class="">
+
+                            <!-- Slide 1st myCarousel start -->
+                            <div id="cocaCarousel" class="carousel slide product-gallery margin-bottom-20" data-ride="carousel" data-interval="false">
+
+
+                                <!-- 1st Slides and Images Start -->
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/coca/1.jpg">
+                                    </div>
+
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/coca/2.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/coca/3.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <img class="img-responsive" src="img/wallet/note-sleeve/coca/4.jpg">
+                                    </div>
+                                    <div class="item">
+                                        <video class="img-responsive" controls muted loop>
+                                            <source src="videos/note-sleeve.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+
+                                </div>
+                                <!-- 1st Slides and Images End -->
+
+                            </div>
+
+                            <!-- indicators - Slide 1st Carousel end start -->
+                            <ol class="carousel-indicators product-gallery-indicators">
+                                <li data-target="#cocaCarousel" data-slide-to="0" class="active">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/coca/1.jpg"/>
+
+                                </li>
+                                <li data-target="#cocaCarousel" data-slide-to="1">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/coca/2.jpg"/>
+                                </li>
+                                <li data-target="#cocaCarousel" data-slide-to="2">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/coca/3.jpg"/>
+                                </li>
+                                <li data-target="#cocaCarousel" data-slide-to="3">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/coca/4.jpg"/>
+                                </li>
+                                <li data-target="#cocaCarousel" data-slide-to="4"  class="product-gallery-indicators-video">
+                                    <img class="img-responsive" src="img/wallet/note-sleeve/coca/5.jpg"/>
+                                    <span class="glyphicon glyphicon-play"></span>
+                                </li>
+                            </ol>
+                            <!-- indicators - Slide 1st Carousel end end -->
+                        </div>
+                        <!-- Slide 1 End -->
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-5">
+                <h1 class="text-primary" th:text="${product.name}"></h1>
+                <div class="rating margin-bottom-20">
+
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+
+                </div>
+
+                <div class="h3 margin-bottom-20" th:text="${product.price} + USD"></div>
+
+                <a th:href="@{/cart/add/{id}(id=${product.id})}" class="btn btn-block btn-success border-radius-0 text-uppercase margin-bottom-20">Add To Cart</a>
+
+                <div class="margin-bottom-20" >
+                    <p th:text="${product.description}"></p>
+                </div>
+
+                <!-- Accordion -->
+                <div class="panel-group margin-bottom-20" id="accordion">
+                    <!-- 1st -->
+                    <div class="panel panel-default border-0">
+                        <!-- 1st title -->
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><span class="glyphicon glyphicon-plus"></span> Leather Quality</a>
+                            </h2>
+                        </div>
+
+                        <!-- 1st content -->
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">The leathers we use are premium hides tanned under gold-rated Leather Working Group environmental protocols, then dyed through so they age gracefully. The woven fabrics we use are sustainably produced and chosen for their durability and lightweight performance.</div>
+                        </div>
+                    </div>
+                    <!-- 2nd -->
+                    <div class="panel panel-default border-0">
+                        <!-- 2nd title -->
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                <a href="#collapse2" data-toggle="collapse" data-parent="#accordion"><span class="glyphicon glyphicon-plus"></span> Delivery</a>
+                            </h2>
+                        </div>
+                        <!-- 2nd content -->
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">We ship worldwide.</div>
+                        </div>
+                    </div>
+                    <!-- 3rd -->
+                    <div class="panel panel-default  border-0">
+                        <div class="panel-heading">
+                            <!-- 3rd Title -->
+                            <h2 class="panel-title">
+                                <a href="#collapse3" data-toggle="collapse" data-parent="#accordion"><span class="glyphicon glyphicon-plus"></span> 3 Years Warranty</a>
+                            </h2>
+                        </div>
+                        <!-- 3rd content -->
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">Bellroy products are warranted to be free from defects in materials and workmanship for three years from original date of purchase when used under normal conditions and for the purpose intended.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Product Description Ends -->
+
+
+
+
+</div>
+<div class="container">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 h2 ">
+                Related Products
+            </div>
+            <th:block th:each="product : ${listProduct}">
+            <div class="col-sm-4 text-center margin-bottom-20">
+
+                <div href="#" class="product-single">
+
+                    <a class="overflow-hidden display-block" th:href="@{/productPage/{id}(id=${product.id})}">
+                        <img class="img-responsive" th:src="@{'/upload/'+${product.image}}"/>
+                    </a>
+                    <div class="product-title margin-bottom-5">
+                        <a th:href="@{/productPage/{id}(id=${product.id})}" th:text="${product.name}">
+                        </a>
+                    </div>
+                    <div class="product-price" th:text="${product.price} + USD">
+
+                    </div>
+                    <div class="product-shrot-description" th:text="${product.category}">
+                    </div>
+                    <a th:href="@{/productPage/{id}(id=${product.id})}" class="product-add-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+
+                    <button type="button" class="quick-view" data-toggle="modal" data-target="#google-pixelModal" value="Quick View">
+                        <i class="fa fa-plus-square-o"></i>
+                    </button>
+                </div>
+
+
+                <div id="google-pixelModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content background-color-f7f7f7">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title  bold-text">Google Pixel Case</h4>
+                            </div>
+                            <div class="modal-body row text-align-left">
+
+                                <div class="col-md-7">
+                                    <img class="img-responsive" src="img/phone-case/google-pixel/black/1.jpg"/>
+                                </div>
+                                <div class="col-md-5">
+                                    <p class="h5 bold-text">Description</p>
+                                    <p>This is a somewhat sizable description of the product in the modal.</p>
+                                    <p class="h5 bold-text">price</p>
+                                    <p class="product-price padding-0">
+                                        $89.99 <sup>USD</sup>
+                                    </p>
+                                    <p class="btn-group-sm">
+                                        <a href="single-product-description-small-key.html" class="btn btn-info"><span class="glyphicon glyphicon-check"> </span> View Product</a>
+                                        <a href="cart.html" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"> </span> Add to Cart</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default background-color-f7f7f7" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            </th:block>
+        </div>
+    </div><!-- Related Products End -->
+
+</div>
+
+
+
+<footer th:replace="/shop/layout :: footer"></footer>
+<div th:replace="shop/rescourcesShop :: script"></div>
+</body>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="shop/rescourcesShop :: head">
+</head>
+<body>
+<a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
+
+<!--Header-->
+<header th:replace="/shop/layout :: header"></header>
+<!--End Header-->
+<!-- Large Banner Start -->
+<div class="container-fluid margin-bottom-20">
+    <div class="row padding-0">
+        <div class="col-sm-12 padding-0">
+            <a th:href="@{/shopPage}" class="homebanner">
+                <img src="/resources/shop/img/homepage.jpg"/>
+                <div class="homebannertitle">
+                    <p>
+                        Considered carry goods to enhance your everyday
+                    </p>
+                    <div class="shop-now">
+                        <span>Shop Now</span>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container padding-0 center-block margin-50 display-block">
+    <div class="row">
+
+        <div class="style_prevu_kit col-xs-6 padding-0" style="background-color:#cb2025;">
+            <img class="img-responsive" src="/resources/shop/img/Phone.jpg" style="height: 330px; width: 100%">
+            <h2>Điện Thoại</h2>
+        </div>
+        <div class="style_prevu_kit col-xs-6 padding-0" style="background-color:#cb2025;">
+            <img class="img-responsive" src="/resources/shop/img/Laptop.jpg" style="height: 330px; width: 100%">
+            <h2>Laptop</h2>
+        </div>
+        <div class="style_prevu_kit col-xs-6 padding-0" style="background-color:#cb2025;">
+            <img class="img-responsive" src="/resources/shop/img/Fashion.jpg" style="height: 330px; width: 100%">
+            <h2>Thời Trang</h2>
+        </div>
+        <div class="style_prevu_kit col-xs-6 padding-0" style="background-color:#cb2025;">
+            <img class="img-responsive" src="/resources/shop/img/Houseware.jpg" style="height: 330px; width: 100%">
+            <h2>Đồ Gia Dụng</h2>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="contentWrapper">
+    <div id="contentWrapperWhite">
+
+        <div class="container">
+            <!-- BreadCrubms Start -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="breadcrumb text-success no-background">
+                        <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Wallets</a></li>
+                        <li>Note Sleeve</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BreadCrubms End -->
+
+            <!-- Starts -->
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <h2 class="h2 margin-bottom-20">Filter</h2>
+
+                    <h5>Select Color</h5>
+                    <div class="btn-group btn-group-justified margin-bottom-20">
+                        <a href="#" class="btn btn-primary">Blue</a>
+                        <a href="#" class="btn btn-info">Sky</a>
+                        <a href="#" class="btn btn-success">Green</a>
+                        <a href="#" class="btn btn-danger">Red</a>
+                    </div>
+
+                    <h5 class="margin-bottom-20">Select Product Category</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Wallets <span class="badge">12</span></a>
+                        <a href="#" class="list-group-item">Bags<span class="badge">12</span></a>
+                        <a href="#" class="list-group-item">Third item<span class="badge">12</span></a>
+                    </div>
+                    <div class="dropdown drop">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Select Edition<span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Designer Edition</a></li>
+                            <li><a href="#">Holiday Edition</a></li>
+                            <li><a href="#">New Year Edition</a></li>
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-9">
+                    <h2 class="h2">Shop</h2>
+
+                    <div class="row">
+
+                        <th:block th:each ="product : ${list}">
+                            <div class="col-sm-4 text-center margin-bottom-20">
+                                <div href="#" class="product-single">
+
+                                    <a class="overflow-hidden display-block" th:href="@{productPage/{id}(id=${product.id})}">
+                                        <img class="img-responsive" th:src="@{'/upload/'+${product.image}}">
+                                    </a>
+                                    <div class="product-title margin-bottom-5">
+                                        <a href="#" th:text="${product.name}">
+                                        </a>
+                                    </div>
+                                    <div class="product-price" th:text="'$'+${product.price}"><sup>USD</sup>
+                                    </div>
+                                    <div class="product-add-cart"><span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </div>
+
+                                    <button type="button" class="quick-view" data-toggle="modal"
+                                            th:data-target="'#note-sleeveModal'+${product.id}" value="Quick View">
+                                        <i class="fas fa-plus-square-o"></i>
+                                    </button>
+                                </div>
+
+
+                                <div th:id="'note-sleeveModal'+${product.id}" class="modal fade" role="dialog" style="display: none;">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content background-color-f7f7f7">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                                <h4 class="modal-title  bold-text" th:text="${product.name}"></h4>
+                                            </div>
+                                            <div class="modal-body row text-align-left">
+
+                                                <div class="col-md-7">
+                                                    <img class="img-responsive" th:src="@{'/upload/'+${product.image}}">
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p class="h5 bold-text">Description</p>
+                                                    <p th:text="${product.description}"></p>
+                                                    <p class="h5 bold-text">Price</p>
+                                                    <p class="product-price padding-0" th:text="'$'+${product.price}"><sup>USD</sup>
+                                                    </p>
+                                                    <p class="btn-group-sm">
+                                                        <a href="#" class="btn btn-info"><span
+                                                                class="glyphicon glyphicon-check"> </span> View Product</a>
+                                                        <a href="#" class="btn btn-info"><span
+                                                                class="glyphicon glyphicon-shopping-cart"> </span> Add to
+                                                            Cart</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default background-color-f7f7f7"
+                                                        data-dismiss="modal">Close
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </th:block>
+                        <!-- single product Out of Stock Start -->
+                        <!-- single product Out of Stock End -->
+                    </div>
+                    <!-- Pagination Start -->
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <ul class="pagination pagination-lg">
+                                <li class="active"><a href="shop.html">1</a></li>
+                                <li><a href="shop2.html">2</a></li>
+                                <li><a href="shop2.html"><span class="glyphicon glyphicon-arrow-right"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Pagination End -->
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<footer th:replace="/shop/layout :: footer"></footer>
+<div th:replace="shop/rescourcesShop :: script"></div>
+</body>
